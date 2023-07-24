@@ -219,7 +219,14 @@ func addShoopingList(_ food: Food) {
 }
 
 func showShoopingList() {
-    shoppingList.forEach { item in
-        print(item)
+    var total = 0
+    if shoppingList.isEmpty {
+        print("장바구니가 비어있습니다.")
+    } else {
+        for i in 0...shoppingList.count-1 {
+            print ("\(i). \(shoppingList[i].name) | W \(shoppingList[i].price)")
+            total += shoppingList[i].price
+        }
     }
+    print("total = W \(total)")
 }
