@@ -2,7 +2,7 @@
 import Foundation
 
 class Order {
-    func printMenu() { // 나중에 마저 해놓자!
+    func printMenu() { // 이런;;
         print("덜덜. 뭔가 잘못됐다. 덜덜.")
     }
 
