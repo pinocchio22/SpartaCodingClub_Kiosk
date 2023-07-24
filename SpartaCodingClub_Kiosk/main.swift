@@ -7,82 +7,33 @@
 
 import Foundation
 
-struct Burger {
-    let name: String
-    let price: Double
-    let discription: String
-    
-    init(name: String, price: Double, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() {
-        print("\(name) | W \(price) | \(discription)")
-    }
-}
-
-struct Drink {
-    let name: String
-    let price: Double
-    let discription: String
-    
-    init(name: String, price: Double, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() {
-        print("\(name) | W \(price) | \(discription)")
-    }
-}
-
-var intro = """
-"SHAKESHACK BURGER 에 오신걸 환영합니다."
-아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.
-
-[ SHAKESHACK MENU ]
-1. Burgers         | 앵거스 비프 통살을 다져만든 버거
-2. Frozen Custard  | 매장에서 신선하게 만드는 아이스크림
-3. Drinks          | 매장에서 직접 만드는 음료
-4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주
-0. 종료             | 프로그램 종료
-"""
-
-// burger
-var shackBurger = Burger(name: "ShackBurger", price: 6.9, discription: "토마토, 양상추, 쉑소스가 토핑된 치즈버거")
-
-// drink
-var coke = Drink(name: "Coca-Cola", price: 2.5, discription: "코카콜라")
-
-// menu
 while true {
-    print(intro)
-    switch readLine() {
-    case "1":
-        showBurger()
-    case "2":
-        print("Frozen Custard")
-    case "3":
-        showDrink()
-    case "4":
-        print("Bear")
-    case "5":
-        exit(0)
-    default:
-        print("default")
+    kiosk.greetCustomer()
+    let userInput = readLine()
+
+    switch userInput {
+    case "1": print("눈이 띙해지는 아이스크림!")
+        for iceCream in iceCreamList {
+            iceCream.displayInfo()
+        }
+        let userChoice = readLine()
+    case "2": print("\n가족과 함께 31일 넘게 즐겨 먹는 케이크~\n")
+        for iceCreamCake in iceCreamCakeList {
+            iceCreamCake.displayInfo()
+        }
+        let userChoice = readLine()
+    case "3": print("\n아이스크림이 음료가 된다!? ㄴㅇㄱ\n")
+        for drink in drinkList {
+            drink.displayInfo()
+        }
+        let userChoice = readLine()
+    case "4": print("\n난 포기 못해 디저트!\n")
+        for dessert in dessertList {
+            dessert.displayInfo()
+        }
+        let userChoice = readLine()
+    case "0": print("\n배스킨 라빈스를 찾아주셔서 감사합니다. 키오스크를 종료합니다.")
+        break
+    default: print("🚨 1~4 또는 0번을 입력해주세요.\n")
     }
-
-}
-
-// show buger menu
-func showBurger() {
-    shackBurger.displayInfo()
-}
-
-// show drink menu
-func showDrink() {
-    coke.displayInfo()
 }
