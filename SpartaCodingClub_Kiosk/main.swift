@@ -7,80 +7,6 @@
 
 import Foundation
 
-
-// food protocol
-protocol Food {
-    var name: String { get }
-    var price: Int { get }
-    var discription: String { get }
-    
-    func displayInfo() -> String
-}
-
-struct IceCream: Food {
-    let name: String
-    let price: Int
-    let discription: String
-    
-    init(name: String, price: Int, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() -> String {
-        return ("\(name) | W \(price) | \(discription)")
-    }
-}
-
-struct IceCraemCake: Food {
-    let name: String
-    let price: Int
-    let discription: String
-    
-    init(name: String, price: Int, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() -> String {
-        return ("\(name) | W \(price) | \(discription)")
-    }
-}
-
-struct Drink: Food {
-    let name: String
-    let price: Int
-    let discription: String
-    
-    init(name: String, price: Int, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() -> String {
-        return ("\(name) | W \(price) | \(discription)")
-    }
-}
-
-struct Desert: Food {
-    let name: String
-    let price: Int
-    let discription: String
-    
-    init(name: String, price: Int, discription: String) {
-        self.name = name
-        self.price = price
-        self.discription = discription
-    }
-    
-    func displayInfo() -> String {
-        return ("\(name) | W \(price) | \(discription)")
-    }
-}
-
 // Icecream
 var icecreamList = [
     IceCream(name: "민트 초콜렛 칩", price: 4500, discription: "쿨한 당신의 선택! 상쾌한 민트향에 초코칩까지!"),
@@ -149,9 +75,8 @@ while true {
     case "0":
         exit(0)
     default:
-        print("default")
+        print("잘못된 입력입니다.")
     }
-
 }
 
 // show icecream menu
