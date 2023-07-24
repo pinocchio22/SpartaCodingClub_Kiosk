@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDEC60972A6E6D48001A4034 /* IceCream.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC60962A6E6D48001A4034 /* IceCream.swift */; };
+		BDEC609D2A6E70F0001A4034 /* Kiosk.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC609C2A6E70F0001A4034 /* Kiosk.swift */; };
+		BDEC609F2A6E7124001A4034 /* IceCreamCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC609E2A6E7124001A4034 /* IceCreamCake.swift */; };
+		BDEC60A12A6E7190001A4034 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC60A02A6E7190001A4034 /* Dessert.swift */; };
+		BDEC60A32A6E7322001A4034 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC60A22A6E7322001A4034 /* Drink.swift */; };
+		BDEC60A52A6E7339001A4034 /* MenuBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEC60A42A6E7339001A4034 /* MenuBoard.swift */; };
 		FFDE15162A6E4B150092F7FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15152A6E4B150092F7FD /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +29,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BDEC60962A6E6D48001A4034 /* IceCream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCream.swift; sourceTree = "<group>"; };
+		BDEC609C2A6E70F0001A4034 /* Kiosk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiosk.swift; sourceTree = "<group>"; };
+		BDEC609E2A6E7124001A4034 /* IceCreamCake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamCake.swift; sourceTree = "<group>"; };
+		BDEC60A02A6E7190001A4034 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
+		BDEC60A22A6E7322001A4034 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		BDEC60A42A6E7339001A4034 /* MenuBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBoard.swift; sourceTree = "<group>"; };
 		FFDE15122A6E4B150092F7FD /* SpartaCodingClub_Kiosk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpartaCodingClub_Kiosk; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDE15152A6E4B150092F7FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				FFDE15152A6E4B150092F7FD /* main.swift */,
+				BDEC609C2A6E70F0001A4034 /* Kiosk.swift */,
+				BDEC60A42A6E7339001A4034 /* MenuBoard.swift */,
+				BDEC60962A6E6D48001A4034 /* IceCream.swift */,
+				BDEC609E2A6E7124001A4034 /* IceCreamCake.swift */,
+				BDEC60A02A6E7190001A4034 /* Dessert.swift */,
+				BDEC60A22A6E7322001A4034 /* Drink.swift */,
 			);
 			path = SpartaCodingClub_Kiosk;
 			sourceTree = "<group>";
@@ -120,7 +138,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEC60A12A6E7190001A4034 /* Dessert.swift in Sources */,
+				BDEC609D2A6E70F0001A4034 /* Kiosk.swift in Sources */,
+				BDEC60A52A6E7339001A4034 /* MenuBoard.swift in Sources */,
+				BDEC609F2A6E7124001A4034 /* IceCreamCake.swift in Sources */,
 				FFDE15162A6E4B150092F7FD /* main.swift in Sources */,
+				BDEC60A32A6E7322001A4034 /* Drink.swift in Sources */,
+				BDEC60972A6E6D48001A4034 /* IceCream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

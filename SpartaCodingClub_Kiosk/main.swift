@@ -8,62 +8,32 @@
 import Foundation
 
 while true {
-    print("""
-    이번 여름 시원하게 해드릴 배스킨 라빈스에 오신것을 환영합니다~! （˶′◡‵˶）\n
-    [ BASKIN ROBBINS MENU ]
-    1. 아이스크림
-    2. 아이스크림 케이크
-    3. 음료
-    4. 디저트
-    0. 종료
-    """)
-    let userInput = readLine()!
+    kiosk.greetCustomer()
+    let userInput = readLine()
 
     switch userInput {
-    case "1": print("""
-        [ ICECREAM MENU ]
-        1. 민트 초콜렛 칩 | W 4.5 | 쿨한 당신의 선택! 상쾌한 민트향에 초코칩까지!
-        2. 레인보우 샤베트 | W 5.5 | 쿨한 당신의 선택! 상쾌한 민트향에 초코칩까지!
-        3. 파스타치오 아몬드 | W 5.0 | 피스타치오향과 아몬드가 만나 고소함이 두배!
-        3. 엄마는 외계인 | W 6.5 | 피스타치오향과 아몬드가 만나 고소함이 두배!
-        4. 아몬드 봉봉 | W 4.0 | 피스타치오향과 아몬드가 만나 고소함이 두배!
-        0. 뒤로가기 | 뒤로가기
-        """)
-        let choice = readLine()
-        
-    case "2": print( """
-        [ ICECREAM CAKE MENU ]
-        1. 골라먹는 27 큐브 | W 10.0 | 9가지 맛 아이스크림 바이트를 초콜릿 판 위에 쌓아올려 전체 다 취식 가능한 실속있는 케이크
-        2. 수줍은 웰시코기의 숨바꼭질 | W 30.0 | 부끄러움 많은 웰시코기의 앙증맞은 뒷모습을 표현한 케이크
-        3. 미니 골라먹는 와츄원 | W 15.4 | BR 베스트셀러 골라먹는 와츄원의 미니 버전! 다양한 맛을 골라먹는 매력에 가성비까지 더해진 매력만점 미니 케이크
-        3. 미니 해피버스데이 케이크 | W 25.0 | BR 베스트셀러 해피 버스데이 케이크의 미니 버전! 레트로 감성과 레터링 초콜릿으로 더욱 예쁜 미니 케이크
-        4. 골라먹는 스노우 볼 | W 35.0 | 동글동글 스노우 볼을 가득! BR의 아이스크림을 한입에 쏙~ 넣어 즐길 수 있는 스노우 볼 케이크
-        0. 뒤로가기 | 뒤로가기
-        """)
-        let choice = readLine()
-        
-    case "3": print("""
-        [ BEVERAGES MENU ]
-        1. 엄마는 외계인 블라스트 | W 5.7 | 동글동글 스노우 볼을 가득! BR의 아이스크림을 한입에 쏙~ 넣어 즐길 수 있는 스노우 볼 케이크
-        2. 아이스 아메리카노 | W 4.5 | 카페브리즈 커피를 가장 부드럽게 즐길 수 있는 따뜻한 아메리카노
-        3. 아몬드 봉봉 블라스트 | W 5.5 | 고소하고 부드러운 바닐라 풍미에 식감이 일품인 초콜릿 코팅 아몬드가 토핑된 블라스트
-        3. 딸기 연유 라떼 | W 5.5 | 달콤한 연유와 딸기과육이 들어있는 딸기라떼에 베리베리 스트로베리 아이스크림을 토핑한 부드러운 라떼
-        4. 카푸치노 블라스트 모카 | W 6.0 | 달콤한 초코시럽이 첨가되어 더욱 깊고 풍부한 맛이 특징
-        0. 뒤로가기 | 뒤로가기
-        """)
-        let choice = readLine()
-
-    case "4": print("""
-        [ DESSERT MENU ]
-        1. 소금 우유 아이스 모찌 | W 2.5 | 쫀득한 찹쌀떡 속에 고소한 우유 아이스크림과 짭쪼름한 소금이 어우러진 디저트
-        2. 모나카 우도 땅콩 & 바닐라 | W 3.0 | 돌하르방 모나카 속에 바닐라 아이스크림과 우도 땅콩이 어우러진 디저트
-        3. 맥심 스틱바 모카골드 마일드 | W 3.5 | 맥심 모카골드 마일드의 풍미를 그대로 담아 시원하게 즐기는 스틱바
-        3. 오리지널 팥 인절미 빙수 | W 6.0 | 우유얼음에 쫄깃한 인절미, 견과류, 통단팥이 조화롭게 어우러진 빙수
-        0. 뒤로가기 | 뒤로가기
-        """)
-        let choice = readLine()
-
-    case "0": print("배스킨 라빈스를 찾아주셔서 감사합니다. 키오스크를 종료합니다.")
-    default: print("1~4 또는 0번을 입력해주세요.")
+    case "1": print("눈이 띙해지는 아이스크림!")
+        for iceCream in iceCreamList {
+            iceCream.displayInfo()
+        }
+        let userChoice = readLine()
+    case "2": print("\n가족과 함께 31일 넘게 즐겨 먹는 케이크~\n")
+        for iceCreamCake in iceCreamCakeList {
+            iceCreamCake.displayInfo()
+        }
+        let userChoice = readLine()
+    case "3": print("\n아이스크림이 음료가 된다!? ㄴㅇㄱ\n")
+        for drink in drinkList {
+            drink.displayInfo()
+        }
+        let userChoice = readLine()
+    case "4": print("\n난 포기 못해 디저트!\n")
+        for dessert in dessertList {
+            dessert.displayInfo()
+        }
+        let userChoice = readLine()
+    case "0": print("\n배스킨 라빈스를 찾아주셔서 감사합니다. 키오스크를 종료합니다.")
+        break
+    default: print("🚨 1~4 또는 0번을 입력해주세요.\n")
     }
 }
