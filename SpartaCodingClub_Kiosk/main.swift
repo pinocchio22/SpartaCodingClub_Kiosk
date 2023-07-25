@@ -24,14 +24,15 @@ let intro = """
 
 var accountList = [Account]()
 
-func newAccount(name: String, balance: Int) -> Account {
-    let account = Account(accountName: name, currentBalance: balance)
-    accountList.append(account)
-    return account
-}
+var account = newAccount(name: "Daisy", balance:  Int.random(in: 50000...1000000))
 
-let account = newAccount(name: "Daisy", balance:  Int.random(in: 50000...1000000))
-//account.printBalance()
+var totalMoney = 0
+
+var date = DateFormatter()
+date.locale = Locale(identifier: "ko_kr")
+date.timeZone = TimeZone(abbreviation: "KST")
+date.dateFormat = "yyyy-MM-dd HH:mm:ss"
+print(date.string(from: Date()))
 
 print(intro)
 // menu
@@ -127,25 +128,20 @@ func showOrderList() {
         print("[ Orders ]")
         orderList.forEach { item in
             totalMoney += item.price
-            print("\(item.name) | W \(item.price) | \(item.discription)")
+            print("\(item.name) | W \(item.price) | \(item.discription) ")
         }
     }
     print("[ Total ] \n W \(totalMoney) \n 1. 주문    2. 메뉴판")
     if readLine() == "1" {
-        payMoney()
-        print("")
+        account.withdraw(value: totalMoney)
+        account.printBalance()
     } else {
         print(intro)
     }
 }
 
-func payMoney() {
-    if myMoney > totalMoney {
-        myMoney -= totalMoney
-        totalMoney = 0
-        orderList = []
-        print("결제가 완료되었습니다.   (결제 시간)")
-    } else {
-        print("잔액이 부족합니다.")
-    }
+func newAccount(name: String, balance: Int) -> Account {
+    let account = Account(accountName: name, currentBalance: balance)
+    accountList.append(account)
+    return account
 }
