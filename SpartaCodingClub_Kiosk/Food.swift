@@ -11,7 +11,7 @@ import Foundation
 protocol Food {
     var name: String { get }
     var price: Int { get }
-    var discription: String { get }
+    var description: String { get }
     
     func displayInfo() -> String
 }

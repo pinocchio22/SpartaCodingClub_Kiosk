@@ -16,12 +16,13 @@ struct Account {
         self.currentBalance = currentBalance
     }
     
-    mutating func withdraw (value: Int)-> Int {
-        if currentBalance - value < 0 {
+    mutating func withdraw (value: Food)-> Int {
+        if currentBalance - value.price < 0 {
             print("잔액이 부족합니다. 죄송..")
             return -1
         }
-        currentBalance -= value
+        currentBalance -= value.price
+        print("\(currentBalance)원이 남았습니다. \(value.price)원 구매했습니다.")
         return currentBalance
     }
     
