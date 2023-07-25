@@ -22,8 +22,16 @@ let intro = """
 0. 종료             | 프로그램 종료
 """
 
-var totalMoney = 0
-var myMoney = 0
+var accountList = [Account]()
+
+func newAccount(name: String, balance: Int) -> Account {
+    let account = Account(accountName: name, currentBalance: balance)
+    accountList.append(account)
+    return account
+}
+
+let account = newAccount(name: "Daisy", balance:  Int.random(in: 50000...1000000))
+//account.printBalance()
 
 print(intro)
 // menu
