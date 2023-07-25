@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Desert: Food {
+struct Dessert: Food {
     let name: String
     let price: Int
     let discription: String
