@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB6FF40C2A6F8B4C00305F53 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF40B2A6F8B4C00305F53 /* Account.swift */; };
 		FFDE15162A6E4B150092F7FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15152A6E4B150092F7FD /* main.swift */; };
 		FFDE151D2A6E87490092F7FD /* IceCream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE151C2A6E87490092F7FD /* IceCream.swift */; };
 		FFDE151F2A6E87C00092F7FD /* IceCreamCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE151E2A6E87C00092F7FD /* IceCreamCake.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB6FF40B2A6F8B4C00305F53 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		FFDE15122A6E4B150092F7FD /* SpartaCodingClub_Kiosk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpartaCodingClub_Kiosk; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDE15152A6E4B150092F7FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FFDE151C2A6E87490092F7FD /* IceCream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCream.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				FFDE15202A6E87D70092F7FD /* Drink.swift */,
 				FFDE15222A6E87F70092F7FD /* Dessert.swift */,
 				FFDE15242A6E88220092F7FD /* Food.swift */,
+				AB6FF40B2A6F8B4C00305F53 /* Account.swift */,
 			);
 			path = SpartaCodingClub_Kiosk;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 				FFDE151F2A6E87C00092F7FD /* IceCreamCake.swift in Sources */,
 				FFDE151D2A6E87490092F7FD /* IceCream.swift in Sources */,
 				FFDE15212A6E87D70092F7FD /* Drink.swift in Sources */,
+				AB6FF40C2A6F8B4C00305F53 /* Account.swift in Sources */,
 				FFDE15162A6E4B150092F7FD /* main.swift in Sources */,
 				FFDE15252A6E88220092F7FD /* Food.swift in Sources */,
 			);
@@ -264,8 +268,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = USP329MK32;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -275,8 +280,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = USP329MK32;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

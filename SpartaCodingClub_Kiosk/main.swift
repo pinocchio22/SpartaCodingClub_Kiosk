@@ -54,6 +54,17 @@ var intro = """
 0. 종료             | 프로그램 종료
 """
 
+var accountList = [Account]()
+
+func newAccount(name: String, balance: Int) -> Account {
+    let account = Account(accountName: name, currentBalance: balance)
+    accountList.append(account)
+    return account
+}
+
+let account = newAccount(name: "Daisy", balance:  Int.random(in: 50000...1000000))
+//account.printBalance()
+
 print(intro)
 // menu
 while true {
@@ -112,10 +123,10 @@ func showDrink() {
     addShoopingList(drinkList[Int(index)!-1])
 }
 
-// show desert menu
+// show dessert menu
 func showDesert() {
     for i in 0...dessertList.count-1 {
-        print("\(i+1)." + desertList[i].displayInfo())
+        print("\(i+1)." + dessertList[i].displayInfo())
     }
     guard let index = readLine() else {
         return print("숫자가 입력되지 않았습니다,")
