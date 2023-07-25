@@ -1,3 +1,5 @@
+// ACcount
+
 //
 //  Account.swift
 //  SpartaCodingClub_Kiosk
@@ -6,6 +8,7 @@
 //
 
 import Foundation
+
 
 struct Account {
     let accountName: String
@@ -16,17 +19,16 @@ struct Account {
         self.currentBalance = currentBalance
     }
     
-    mutating func withdraw (value: Food)-> Int {
-        if currentBalance - value.price < 0 {
-            print("잔액이 부족합니다. 죄송..")
-            return -1
+    mutating func withdraw (value: Int) -> String {
+        if currentBalance - value < 0 {
+            return ("잔액이 부족합니다. 현재 잔액은 \(currentBalance)원 입니다.")
         }
-        currentBalance -= value.price
-        print("\(currentBalance)원이 남았습니다. \(value.price)원 구매했습니다.")
-        return currentBalance
+        currentBalance -= value
+        return ("\(currentBalance)원이 남았습니다. \(value)원 구매했습니다.")
     }
     
     func printBalance() {
         print("현재 잔액은 \(currentBalance)입니다.")
     }
 }
+
