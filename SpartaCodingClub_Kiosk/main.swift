@@ -7,6 +7,25 @@
 
 import Foundation
 
+let paymentAvailableStartTime = 9
+let paymentAvailableEndTime = 15
+
+// 현재 시각을 확인하는 함수
+func getCurrentHour() -> Int {
+    return Calendar.current.component(.hour, from: Date())
+}
+// 현재 몇분인지 확인하는 함수
+func getCurrentMinute() -> Int {
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.minute], from: Date())
+    return components.minute ?? 0
+}
+
+func isPaymentAllowed() -> Bool {
+    let currentHour = getCurrentHour()
+    return currentHour >= paymentAvailableStartTime && currentHour < paymentAvailableEndTime
+}
+
 var shoppingList = [Food]()
 var delay: UInt32 = 3
 
@@ -37,27 +56,38 @@ var account = newAccount(name: "Daisy", balance:  Int.random(in: 50000...1000000
 
 print(intro)
 // menu
+var hasShownMessage = false
 while true {
+  if isPaymentAllowed() {
+    hasShownMessage = false // 결제 가능한 상태로 진입하면 다시 false로 설정
     switch readLine() {
     case "1":
-        print("원하시는 제품을 선택해주세요.")
-        showIcecream()
+      print("원하시는 제품을 선택해주세요.")
+      showIcecream()
     case "2":
-        print("원하시는 제품을 선택해주세요.")
-        showIcecreamCake()
+      print("원하시는 제품을 선택해주세요.")
+      showIcecreamCake()
     case "3":
-        print("원하시는 제품을 선택해주세요.")
-        showDrink()
+      print("원하시는 제품을 선택해주세요.")
+      showDrink()
     case "4":
-        print("원하시는 제품을 선택해주세요.")
-        showDesert()
+      print("원하시는 제품을 선택해주세요.")
+      showDesert()
     case "5":
-        showShoppingList()
+      showShoppingList()
     case "0":
-        exit(0)
+      exit(0)
     default:
-        print("잘못된 입력입니다.")
+      print("잘못된 입력입니다.")
     }
+  } else {
+    if !hasShownMessage {
+      print("현재는 결제가 불가능한 시간대입니다. \(paymentAvailableStartTime)시부터 \(paymentAvailableEndTime)시까지 결제가 가능합니다.")
+      print("현재 시각: \(getCurrentHour())시 \(getCurrentMinute())분")
+      sleep(1) // 메시지를 잠시 보여주기 위해 1초 대기
+      hasShownMessage = true // 메시지를 한 번 출력했으므로 true로 설정하여 다시 출력되지 않도록 함
+    }
+  }
 }
 
 // show icecream menu
