@@ -8,6 +8,7 @@
 import Foundation
 
 let paymentAvailableStartTime = 9
+
 let paymentAvailableEndTime = 23
 // 현재 시각을 확인하는 함수
 func getCurrentHour() -> Int {
@@ -31,7 +32,7 @@ let intro = """
 2. Ice Cream Cake  | 아이스크림 케이크
 3. Drinks          | 매장에서 직접 만드는 음료
 4. Desert          | 디저트
-5. OrderList    | 장바구니
+5. OrderList       | 장바구니
 0. 종료             | 프로그램 종료
 """
 
