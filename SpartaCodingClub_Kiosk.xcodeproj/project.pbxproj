@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FFDE15162A6E4B150092F7FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15152A6E4B150092F7FD /* main.swift */; };
+		FFDE151D2A6E87490092F7FD /* IceCream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE151C2A6E87490092F7FD /* IceCream.swift */; };
+		FFDE151F2A6E87C00092F7FD /* IceCreamCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE151E2A6E87C00092F7FD /* IceCreamCake.swift */; };
+		FFDE15212A6E87D70092F7FD /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15202A6E87D70092F7FD /* Drink.swift */; };
+		FFDE15232A6E87F70092F7FD /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15222A6E87F70092F7FD /* Dessert.swift */; };
+		FFDE15252A6E88220092F7FD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15242A6E88220092F7FD /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		FFDE15122A6E4B150092F7FD /* SpartaCodingClub_Kiosk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpartaCodingClub_Kiosk; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDE15152A6E4B150092F7FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FFDE151C2A6E87490092F7FD /* IceCream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCream.swift; sourceTree = "<group>"; };
+		FFDE151E2A6E87C00092F7FD /* IceCreamCake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamCake.swift; sourceTree = "<group>"; };
+		FFDE15202A6E87D70092F7FD /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		FFDE15222A6E87F70092F7FD /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
+		FFDE15242A6E88220092F7FD /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				FFDE15152A6E4B150092F7FD /* main.swift */,
+				FFDE151C2A6E87490092F7FD /* IceCream.swift */,
+				FFDE151E2A6E87C00092F7FD /* IceCreamCake.swift */,
+				FFDE15202A6E87D70092F7FD /* Drink.swift */,
+				FFDE15222A6E87F70092F7FD /* Dessert.swift */,
+				FFDE15242A6E88220092F7FD /* Food.swift */,
 			);
 			path = SpartaCodingClub_Kiosk;
 			sourceTree = "<group>";
@@ -120,7 +135,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDE15232A6E87F70092F7FD /* Dessert.swift in Sources */,
+				FFDE151F2A6E87C00092F7FD /* IceCreamCake.swift in Sources */,
+				FFDE151D2A6E87490092F7FD /* IceCream.swift in Sources */,
+				FFDE15212A6E87D70092F7FD /* Drink.swift in Sources */,
 				FFDE15162A6E4B150092F7FD /* main.swift in Sources */,
+				FFDE15252A6E88220092F7FD /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
