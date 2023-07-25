@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct IceCraemCake: Food {
+struct IceCreamCake: Food {
     let name: String
     let price: Int
-    let discription: String
+    let description: String
     
-    init(name: String, price: Int, discription: String) {
+    init(name: String, price: Int, description: String) {
         self.name = name
         self.price = price
-        self.discription = discription
+        self.description = description
     }
     
     func displayInfo() -> String {
-        return ("\(name) | W \(price) | \(discription)")
+        return ("\(name) | W \(price) | \(description)")
     }
 }
 
