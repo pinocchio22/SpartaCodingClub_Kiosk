@@ -24,7 +24,7 @@ struct IceCream: Food {
 }
 
 // Icecream
-var icecreamList = [
+let icecreamList = [
     IceCream(name: "민트 초콜렛 칩", price: 4500, description: "쿨한 당신의 선택! 상쾌한 민트향에 초코칩까지!"),
     IceCream(name: "레인보우 샤베트", price: 5500, description: "상큼한 파인애플, 오렌지, 라즈베리 샤베"),
     IceCream(name: "피스타치오 아몬드", price: 5000, description: "피스타치오향과 아몬드가 만나 고소함이 두배!"),

@@ -7,12 +7,8 @@
 
 import Foundation
 
-//MARK: - 오늘 할일
-/*
- 저는 네이밍? 정도..?
- */
-
 let paymentAvailableStartTime = 9
+
 let paymentAvailableEndTime = 23
 
 // 현재 시각을 확인하는 함수
@@ -35,23 +31,25 @@ func getCurrentMinute() -> Int {
 let now = Date()
 let date = DateFormatter()
 date.locale = Locale(identifier: "ko_kr")
-date.timeZone = TimeZone(abbreviation: "KST") // "2018-03-21 18:07:27"
-//date.timeZone = TimeZone(abbreviation: "NZST") // "2018-03-21 22:06:39"
+date.timeZone = TimeZone(abbreviation: "KST")
 date.dateFormat = "yyyy-MM-dd HH:mm:ss"
 let kr = date.string(from: now)
 var shoppingList = [Food]()
 var delay: UInt32 = 3
-var intro = """
-"이번 여름 시원하게 해드릴 배스킨 라빈스에 오신것을 환영합니다~! （˶′◡‵˶）"
+
+
+let intro = """
+이번 여름 시원하게 해드릴 배스킨 라빈스에 오신것을 환영합니다~! （˶′◡‵˶）
 아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.
 [ BASKIN ROBBINS MENU ]
-1. Ice Cream    | 아이스크림
-2. Ice Cream Cake | 아이스크림 케이크
-3. Drinks     | 매장에서 직접 만드는 음료
-4. Desert     | 디저트
-5. ShoppingList  | 장바구니
-0. 종료       | 프로그램 종료
+1. Ice Cream       | 아이스크림
+2. Ice Cream Cake  | 아이스크림 케이크
+3. Drinks          | 매장에서 직접 만드는 음료
+4. Desert          | 디저트
+5. ShoppingList    | 장바구니
+0. 종료             | 프로그램 종료
 """
+
 var accountList = [Account]()
 var account = newAccount(name: "Daisy", balance: Int.random(in: 5000...1000000))
 
@@ -64,7 +62,7 @@ func newAccount(name: String, balance: Int) -> Account {
 DispatchQueue.global().async {
     while true {
         sleep(5)
-        print("\n현재 주문 대기 수: \(Account.currentUser)")
+        print("\n현재 주문 대기 수: \(Account.currentItem)")
     }
 }
 

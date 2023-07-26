@@ -24,7 +24,7 @@ struct IceCreamCake: Food {
 }
 
 // Icecream Cake
-var icecreamCakeList = [
+let icecreamCakeList = [
     IceCreamCake(name: "골라먹는 27 큐브", price: 10000, description: "9가지 맛 아이스크림 바이트를 초콜릿 판 위에 쌓아올려 전체 다 취식 가능한 실속있는 케이크"),
     IceCreamCake(name: "수줍은 웰시코기의 숨바꼭질", price: 30000, description: "부끄러움 많은 웰시코기의 앙증맞은 뒷모습을 표현한 케이크"),
     IceCreamCake(name: "미니 골라먹는 와츄원", price: 15000, description: "BR 베스트셀러 골라먹는 와츄원의 미니 버전! 다양한 맛을 골라먹는 매력에 가성비까지 더해진 매력만점 미니 케이크"),
