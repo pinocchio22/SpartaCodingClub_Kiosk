@@ -7,11 +7,6 @@
 
 import Foundation
 
-//MARK: - 오늘 할일
-/*
- 저는 네이밍? 정도..?
- */
-
 let paymentAvailableStartTime = 9
 
 let paymentAvailableEndTime = 23
@@ -51,7 +46,7 @@ let intro = """
 2. Ice Cream Cake  | 아이스크림 케이크
 3. Drinks          | 매장에서 직접 만드는 음료
 4. Desert          | 디저트
-5. OrderList       | 장바구니
+5. ShoppingList    | 장바구니
 0. 종료             | 프로그램 종료
 """
 
