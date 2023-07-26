@@ -36,8 +36,7 @@ func getCurrentMinute() -> Int {
 let now = Date()
 let date = DateFormatter()
 date.locale = Locale(identifier: "ko_kr")
-date.timeZone = TimeZone(abbreviation: "KST") // "2018-03-21 18:07:27"
-//date.timeZone = TimeZone(abbreviation: "NZST") // "2018-03-21 22:06:39"
+date.timeZone = TimeZone(abbreviation: "KST")
 date.dateFormat = "yyyy-MM-dd HH:mm:ss"
 let kr = date.string(from: now)
 var shoppingList = [Food]()
@@ -55,6 +54,7 @@ let intro = """
 5. OrderList       | 장바구니
 0. 종료             | 프로그램 종료
 """
+
 var accountList = [Account]()
 var account = newAccount(name: "Daisy", balance: Int.random(in: 5000...1000000))
 
@@ -67,7 +67,7 @@ func newAccount(name: String, balance: Int) -> Account {
 DispatchQueue.global().async {
     while true {
         sleep(5)
-        print("\n현재 주문 대기 수: \(Account.currentUser)")
+        print("\n현재 주문 대기 수: \(Account.currentItem)")
     }
 }
 

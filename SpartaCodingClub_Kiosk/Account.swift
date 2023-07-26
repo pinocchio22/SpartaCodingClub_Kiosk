@@ -12,14 +12,14 @@ import Foundation
 struct Account {
     let accountName: String
     var currentBalance: Int
-    var user: Int
-    static var currentUser: Int = 0
+    var shoppingBag: Int
+    static var currentItem: Int = 0
     
     init (accountName: String, currentBalance: Int) {
         self.accountName = accountName
         self.currentBalance = currentBalance
-        Account.currentUser += 1
-        self.user = Account.currentUser
+        Account.currentItem += 1
+        self.shoppingBag = Account.currentItem
     }
     
     mutating func withdraw (value: Int) -> String {
