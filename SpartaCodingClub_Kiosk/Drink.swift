@@ -31,3 +31,25 @@ let drinkList = [
     Drink(name: "딸기 연유 라떼", price: 5500, description: "달콤한 연유와 딸기과육이 들어있는 딸기라떼에 베리베리 스트로베리 아이스크림을 토핑한 부드러운 라떼"),
     Drink(name: "카푸치노 블라스트 모카", price: 6000, description: "달콤한 초코시럽이 첨가되어 더욱 깊고 풍부한 맛이 특징"),
 ]
+
+func drinkRun() {
+  for i in 0...drinkList.count-1 {
+    print("\(i+1)." + drinkList[i].displayInfo())
+  }
+  print("0.돌아가기")
+  var isRunning = true
+  while isRunning {
+    print("음료를 담아주세요 ->", terminator: " ")
+    guard let index = readLine() else {
+      return print("숫자가 입력되지 않았습니다,")
+    }
+    switch index {
+    case "1", "2", "3", "4", "5":
+      addShoppingList(drinkList[Int(index)!-1])
+    case "0":
+      isRunning = false
+    default:
+      print("잘못된 메뉴입니다. 다시 입력해주세요.")
+    }
+  }
+}

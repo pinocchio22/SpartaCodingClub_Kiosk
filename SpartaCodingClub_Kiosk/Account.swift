@@ -9,14 +9,17 @@
 
 import Foundation
 
-
 struct Account {
     let accountName: String
     var currentBalance: Int
+    var user: Int
+    static var currentUser: Int = 0
     
     init (accountName: String, currentBalance: Int) {
         self.accountName = accountName
         self.currentBalance = currentBalance
+        Account.currentUser += 1
+        self.user = Account.currentUser
     }
     
     mutating func withdraw (value: Int) -> String {
@@ -31,4 +34,3 @@ struct Account {
         print("현재 잔액은 \(currentBalance)입니다.")
     }
 }
-
